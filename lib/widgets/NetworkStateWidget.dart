@@ -3,6 +3,15 @@ import 'package:flutter_bloc_network/models/NetworkState.dart';
 
 typedef StateWidgetBuilder<T> = Widget Function(BuildContext context, T value);
 
+/// This widget returns a Widget depending on its [state] [NetworkState]
+///
+/// [state] is the currrent [NetworkState] and the value decides the returned result
+/// [loading] gets returned if the [state] is [NetworkStateLoading]
+/// [error] gets returned if the [state] is [NetworkStateFailed]
+/// [animateSwitch] whether to use [AnimatedSwitcher] or not (default is true)
+/// [loadingUninitialized] if true [loading] gets also returned at [NetworkStateUninitialized]
+/// [builder] this builder gets called if [state] is [NetworkStateSucceeded] and can be used to return a [Widget] based on [T] that gets returned
+/// [initialize] this [Function] gets called if the [state] is [NetworkStateUninitialized]. Should be used to start loading data and changing the [state]
 class NetworkStateWidget<T> extends StatelessWidget {
   final NetworkState<T> state;
   final Widget loading;
