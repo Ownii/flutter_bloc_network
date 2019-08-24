@@ -16,6 +16,7 @@ dependencies:
   flutter_bloc_network:
     git:
       url: git://github.com/Ownii/flutter_bloc_network.git
+      ref: v1.0
 ```
 
 **pub.dev** dependency cooming soon...
