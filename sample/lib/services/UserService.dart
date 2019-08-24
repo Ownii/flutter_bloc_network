@@ -11,4 +11,10 @@ class UserService {
     await Future.delayed(Duration(seconds: 5));
     return users;
   }
+
+  Future<void> createUser(String username, int age) async {
+    var user = User(username, age);
+    await Future.delayed(Duration(seconds: 5));
+    users.add(user);
+  }
 }

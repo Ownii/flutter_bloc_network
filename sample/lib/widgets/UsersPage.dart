@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_network/widgets/BlocNetworkStateBuilder.dart';
+import 'package:flutter_bloc_network/widgets/BlocNetworkBuilder.dart';
 import 'package:flutter_bloc_network_sample/bloc/UserBloc.dart';
 import 'package:flutter_bloc_network_sample/models/User.dart';
+import 'package:flutter_bloc_network_sample/widgets/CreateUserDialog.dart';
 import 'package:flutter_bloc_network_sample/widgets/UsersList.dart';
 
 class UsersPage extends StatefulWidget {
@@ -19,7 +20,7 @@ class _UsersPageState extends State<UsersPage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: BlocNetworkStateBuilder<UserBloc, UserState, UserEvent, List<User>>(
+      body: BlocNetworkBuilder<UserBloc, UserState, UserEvent, List<User>>(
         getValue: (state) => state.users,
         loading: Center(
           child: CircularProgressIndicator(),
@@ -29,6 +30,13 @@ class _UsersPageState extends State<UsersPage> {
         ),
         initializeEvent: UserEventLoad(),
         builder: (context, users) => UsersList(users: users),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          showDialog(
+              context: context, builder: (context) => CreateUserDialog());
+        },
+        child: Icon(Icons.add),
       ),
     );
   }
