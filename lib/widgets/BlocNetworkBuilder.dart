@@ -6,7 +6,7 @@ import 'package:flutter_bloc_network/widgets/NetworkStateWidget.dart';
 
 typedef StateValueGetter<S, T> = NetworkState<T> Function(S state);
 
-class BlocNetworkStateBuilder<B extends Bloc<E, S>, S, E, T>
+class BlocNetworkBuilder<B extends Bloc<E, S>, S, E, T>
     extends StatelessWidget {
   final Widget loading;
   final Widget uninitialized;
@@ -18,7 +18,7 @@ class BlocNetworkStateBuilder<B extends Bloc<E, S>, S, E, T>
   final Function(BuildContext, T) onSucceeded;
   final Function(BuildContext, dynamic) onFailed;
 
-  const BlocNetworkStateBuilder(
+  const BlocNetworkBuilder(
       {Key key,
       this.loading,
       @required this.builder,
