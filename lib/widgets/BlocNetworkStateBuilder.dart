@@ -9,7 +9,7 @@ typedef StateValueGetter<S, T> = NetworkState<T> Function(S state);
 class BlocNetworkStateBuilder<B extends Bloc<E, S>, S, E, T>
     extends StatelessWidget {
   final Widget loading;
-  final bool loadingUninitialized;
+  final Widget uninitialized;
   final bool animateSwitch;
   final StateWidgetBuilder<T> builder;
   final E initializeEvent;
@@ -25,7 +25,7 @@ class BlocNetworkStateBuilder<B extends Bloc<E, S>, S, E, T>
       this.initializeEvent,
       this.animateSwitch = true,
       @required this.getValue,
-      this.loadingUninitialized = true,
+      this.uninitialized,
       this.error,
       this.onSucceeded,
       this.onFailed})
@@ -42,7 +42,7 @@ class BlocNetworkStateBuilder<B extends Bloc<E, S>, S, E, T>
           BlocProvider.of<B>(context)..dispatch(initializeEvent);
         },
         animateSwitch: this.animateSwitch,
-        loadingUninitialized: this.loadingUninitialized,
+        uninitialized: this.uninitialized,
         error: this.error,
       ),
     );
