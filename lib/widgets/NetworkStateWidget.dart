@@ -41,7 +41,7 @@ class NetworkStateWidget<T> extends StatelessWidget {
         (uninitialized == null || state is NetworkStateLoading)) {
       widget = loading;
     }
-    if( uninitialized != null && state is NetworkStateUninitialized ) {
+    if (uninitialized != null && state is NetworkStateUninitialized) {
       widget = uninitialized;
     }
     if (state is NetworkStateSucceeded<T>) {
@@ -49,7 +49,7 @@ class NetworkStateWidget<T> extends StatelessWidget {
     } else if (state is NetworkStateFailed && error != null) {
       widget = error;
     }
-    if( !this.animateSwitch ) {
+    if (!this.animateSwitch) {
       return widget;
     }
 

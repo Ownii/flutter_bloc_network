@@ -91,16 +91,16 @@ class _CreateUserDialogState extends State<CreateUserDialog> {
       );
 
   Widget buildLoading(BuildContext context) => Align(
-    alignment: Alignment.bottomRight,
-    child: Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 32,vertical: 12),
-      child: SizedBox(
+        alignment: Alignment.bottomRight,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
+          child: SizedBox(
             height: 18,
             width: 18,
             child: CircularProgressIndicator(
               strokeWidth: 2,
             ),
           ),
-    ),
-  );
+        ),
+      );
 }

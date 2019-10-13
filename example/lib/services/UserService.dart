@@ -1,7 +1,6 @@
 import 'package:flutter_bloc_network_sample/models/User.dart';
 
 class UserService {
-
   List<User> users = [
     User("Paul", 28),
     User("Anna", 26),
