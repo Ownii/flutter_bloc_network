@@ -8,20 +8,9 @@ Check out the [sample project](./sample) that shows how to load users async and 
 
 ## Getting Started
 
-### Adding dependency
-
-**Github**
-```yml
-dependencies:
-  flutter_bloc_network:
-    git:
-      url: git://github.com/Ownii/flutter_bloc_network.git
-      ref: v1.0
-```
-
-**pub.dev** dependency cooming soon...
-
 ## Basic Usage
+
+To use this plugin, add `flutter_bloc_network` as a [dependency in your pubspec.yaml file](https://flutter.io/platform-plugins/).
 
 ### Bloc
 

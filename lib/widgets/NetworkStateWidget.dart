@@ -21,6 +21,7 @@ class NetworkStateWidget<T> extends StatelessWidget {
   final StateWidgetBuilder<T> builder;
   final Function initialize;
 
+
   const NetworkStateWidget(
     this.state, {
     Key key,
