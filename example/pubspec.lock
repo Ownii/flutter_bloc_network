@@ -28,7 +28,7 @@ packages:
       name: bloc
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.14.4"
+    version: "0.16.1"
   boolean_selector:
     dependency: transitive
     description:
@@ -82,16 +82,14 @@ packages:
       name: flutter_bloc
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.20.1"
+    version: "0.22.0"
   flutter_bloc_network:
     dependency: "direct main"
     description:
-      path: "."
-      ref: develop
-      resolved-ref: "08b123a6843976f339b45f103a531f42ff0cfe57"
-      url: "git://github.com/Ownii/flutter_bloc_network.git"
-    source: git
-    version: "0.0.1"
+      path: ".."
+      relative: true
+    source: path
+    version: "1.0.2"
   flutter_test:
     dependency: "direct dev"
     description: flutter

@@ -1,3 +1,6 @@
+## 1.0.2 - 13.10.2019
+* Used add instead of deprecated dispatch for bloc event call
+
 ## 1.0.1 - 13.10.2019
 * Updated dependency
 

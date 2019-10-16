@@ -78,7 +78,7 @@ class _CreateUserDialogState extends State<CreateUserDialog> {
         children: [
           FlatButton(
             onPressed: () {
-              BlocProvider.of<UserBloc>(context).dispatch(
+              BlocProvider.of<UserBloc>(context).add(
                 UserEventCreate(
                   this.username,
                   int.parse(this.age),

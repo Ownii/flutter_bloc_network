@@ -20,9 +20,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc_network:
-    git:
-      url: git://github.com/Ownii/flutter_bloc_network.git
-      ref: develop
+    path: ../
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

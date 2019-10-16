@@ -45,36 +45,36 @@ class UserBloc extends Bloc<UserEvent, UserState> {
   @override
   Stream<UserState> mapEventToState(UserEvent event) async* {
     if (event is UserEventLoad) {
-      yield currentState.copyWith(
+      yield state.copyWith(
         users: NetworkStateLoading(),
       );
       try {
         var users = await _userService.loadUsers();
-        yield currentState.copyWith(
+        yield state.copyWith(
           users: NetworkStateSucceeded(users),
         );
       } catch (e) {
-        yield currentState.copyWith(
+        yield state.copyWith(
           users: NetworkStateFailed(e),
         );
       }
     }
 
     if (event is UserEventCreate) {
-      yield currentState.copyWith(
+      yield state.copyWith(
         createUser: NetworkStateLoading(),
       );
       try {
         await _userService.createUser(event.username, event.age);
-        yield currentState.copyWith(
+        yield state.copyWith(
           createUser: NetworkStateSucceeded(null),
         );
-        yield currentState.copyWith(
+        yield state.copyWith(
           createUser: NetworkStateUninitialized(),
         );
-        dispatch(UserEventLoad());
+        add(UserEventLoad());
       } catch (e) {
-        yield currentState.copyWith(
+        yield state.copyWith(
           createUser: NetworkStateFailed(e),
         );
       }
