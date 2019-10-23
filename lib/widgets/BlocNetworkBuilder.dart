@@ -50,7 +50,7 @@ class BlocNetworkBuilder<B extends Bloc<E, S>, S, E, T>
         loading: this.loading,
         builder: this.builder,
         initialize: () {
-          BlocProvider.of<B>(context)..dispatch(initializeEvent);
+          BlocProvider.of<B>(context)..add(initializeEvent);
         },
         animateSwitch: this.animateSwitch,
         uninitialized: this.uninitialized,
