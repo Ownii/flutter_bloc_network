@@ -1,6 +1,6 @@
 name: flutter_bloc_network
 description: This package helps to manage network states used with flutter_bloc
-version: 1.0.4
+version: 1.0.6
 homepage: https://github.com/Ownii/flutter_bloc_network
 
 environment:
@@ -9,8 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_bloc: ^2.0.0
-  bloc: ^2.0.0
+  flutter_bloc: ^3.0.0
+  bloc: ^3.0.0
 
 dev_dependencies:
   flutter_test:

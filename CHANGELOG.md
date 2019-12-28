@@ -1,3 +1,6 @@
+## 1.0.6 - 28.12.2019
+* Updated flutter_bloc & bloc to 3.0.0
+
 ## 1.0.4 - 12.1.2019
 * Updated flutter_bloc & bloc to 2.0.0
 
